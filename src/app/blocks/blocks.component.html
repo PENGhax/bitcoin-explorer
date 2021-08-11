@@ -1,0 +1,39 @@
+<div class="form-box">
+  <input
+    type="number"
+    [(ngModel)]="searchHeight"
+    placeholder="Enter the height."
+  />
+  <button (click)="searchBlock()" [disabled]="!searchHeight">Search</button>
+  <p *ngIf="searchHeight && searchHeightHash">Block height is: {{ searchHeightHash }}</p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Height</th>
+      <th>Previous block hash</th>
+      <th>Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let block of blocks" (click)="onSelect(block)">
+      <!-- <td>{{ block.id }}</td> -->
+      <td>
+        <a routerLink="/block-detail/{{ block.height }}">{{ block.height }}</a>
+      </td>
+      <!-- <td>{{ block.version }}</td>
+      <td>{{ block.timestamp | date }}</td>
+      <td>{{ block.tx_count }}</td>
+      
+      <td>{{ block.weight }}</td>
+      <td>{{ block.merkle_root }}</td> -->
+      <td>{{ block.previousblockhash }}</td>
+      <td>{{ block.size }}</td>
+      <!-- <td>{{ block.mediantime }}</td>
+      <td>{{ block.nonce }}</td>
+      <td>{{ block.bits }}</td>
+      <td>{{ block.difficulty }}</td> -->
+    </tr>
+  </tbody>
+</table>

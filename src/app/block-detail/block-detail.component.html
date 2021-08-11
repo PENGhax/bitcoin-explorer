@@ -1,0 +1,10 @@
+<div *ngIf="block">
+  <table>
+    <tbody>
+      <tr *ngFor="let key of itemKeys">
+        <td>{{key}}</td>
+        <td>{{block[key]}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

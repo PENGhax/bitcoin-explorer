@@ -1,0 +1,124 @@
+.form-box{
+  margin: 20px 0;
+  text-align: right;
+}
+.form-box input {
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  width: 60%;
+}
+.form-box button {
+  padding: 0.35rem 0.6rem;
+  background-color: #0086d4;
+  color: #fff;
+  border-style: unset;
+  border-radius: 5px;
+}
+.form-box button:hover {
+  background-color: #39abe9;
+}
+.form-box button:disabled {
+  background-color: #9cc9e7;
+}
+
+p {
+  overflow-wrap: anywhere;
+}
+
+@media only screen and (max-width: 640px),
+  (min-device-width: 648px) and (max-device-width: 1024px) {
+  .form-box input, .form-box button {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 160px;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 160px;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  /*
+  Label the data
+  */
+  /* td:nth-of-type(1):before {
+  content: "ID";
+}
+td:nth-of-type(2):before {
+  content: "Height";
+}
+td:nth-of-type(3):before {
+  content: "Version";
+}
+td:nth-of-type(4):before {
+  content: "Timestamp";
+}
+td:nth-of-type(5):before {
+  content: "TX count";
+}
+td:nth-of-type(6):before {
+  content: "Size";
+}
+td:nth-of-type(7):before {
+  content: "Weight";
+}
+td:nth-of-type(8):before {
+  content: "Merkle Root";
+}
+td:nth-of-type(9):before {
+  content: "Previous block hash";
+}
+td:nth-of-type(10):before {
+  content: "Median time";
+}
+td:nth-of-type(11):before {
+  content: "Nonce";
+}
+td:nth-of-type(12):before {
+  content: "Bits";
+}
+td:nth-of-type(13):before {
+  content: "Difficulty";
+} */
+  td:nth-of-type(1):before {
+    content: "Height";
+  }
+  td:nth-of-type(2):before {
+    content: "Previous block hash";
+  }
+  td:nth-of-type(3):before {
+    content: "Size";
+  }
+}
